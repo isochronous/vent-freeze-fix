@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="$(MSBuildThisFileDirectory)..\..\common\oni-mod.props" />
+
+  <PropertyGroup>
+    <AssemblyName>VentFreezeFix</AssemblyName>
+    <RootNamespace>VentFreezeFix</RootNamespace>
+    <Version>0.1.0</Version>
+    <UsePLib>true</UsePLib>
+    <ReferenceUnityUI>true</ReferenceUnityUI>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- PLib options classes carry Newtonsoft attributes; the game ships Newtonsoft.Json. -->
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>$(GameLibsFolder)\Newtonsoft.Json.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <Import Project="$(MSBuildThisFileDirectory)..\..\common\oni-mod.targets" />
+
+</Project>

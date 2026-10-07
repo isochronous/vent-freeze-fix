@@ -1,0 +1,11 @@
+Fixes the save/load quirk where a packet leaving a liquid vent on the tick a save is written freezes into a natural tile on load instead of dropping as debris, sometimes taking the debris pile under the vent with it.
+
+[h2]How it works[/h2]
+The game only forms a natural tile when the freezing liquid holds at least 80% of its element's default mass; smaller amounts become debris. Each liquid vent gets a watcher that checks the vent cell and the landing cell below it every tick for the first two seconds after a load, then switches itself off. When one of them turns into a natural tile although it held less liquid than that the tick before, the tile is turned back into debris of the same element at its full mass, pile included. Real pools that freeze are left alone.
+
+[h2]Debug mode[/h2]
+An option adds a "Save on next vent emit" button to the game screen. Arm it and the next liquid vent emit writes VentFreezeRepro.sav next to your current save, on the exact tick, which is otherwise nearly impossible to hit by hand.
+
+Reads only the public grid and uses the game's own replace-element and spawn-resource calls; nothing in the sim or the save is touched.
+
+Source and issues: https://github.com/isochronous/vent-freeze-fix

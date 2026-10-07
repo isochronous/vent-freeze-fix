@@ -1,0 +1,3 @@
+title: "Vent Freeze Fix"
+description: "Liquid that leaves a liquid vent on the tick a save is written can freeze into a natural tile on load instead of dropping as debris, and can take a debris pile under the vent with it. This mod watches the cells at and below each liquid vent and turns such a tile back into debris within a tick, at its full mass. Tiles formed from a real pool (80% or more of the element's default mass) are left alone."
+staticID: "Isochronous.VentFreezeFix"

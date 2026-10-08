@@ -17,19 +17,41 @@ namespace VentFreezeFix
 		public const string SaveName = "VentFreezeRepro.sav";
 
 		private static bool enabled;
+		private static bool loaded;
 		private static bool armed;
 		private static bool pending;
+		/// <summary>Debug mode: the first emits after a load are logged with mass and temperature.</summary>
+		private static int emitsLogged;
+		private const int EmitsToLog = 60;
 		private static string pendingNote;
 		private static GameObject buttonObject;
+
+		/// <summary>The debug option, read once per game and again whenever a game is loaded (watchers may ask before Game spawns).</summary>
+		public static bool Enabled
+		{
+			get
+			{
+				if (!loaded)
+				{
+					enabled = Options.Load().DebugMode;
+					loaded = true;
+				}
+				return enabled;
+			}
+		}
 
 		[HarmonyPatch(typeof(Game), "OnSpawn")]
 		public static class Game_OnSpawn_Patch
 		{
 			public static void Postfix()
 			{
-				enabled = Options.Load().DebugMode;
+				Options options = Options.Load();
+				enabled = options.DebugMode;
+				loaded = true;
+				VentFreezeWatcher.RepairEnabled = options.RepairOnLoad;
 				armed = false;
 				pending = false;
+				emitsLogged = 0;
 				if (!enabled || GameScreenManager.Instance?.ssOverlayCanvas == null)
 					return;
 				var button = new PButton("VentFreezeFixDebugSave")
@@ -62,9 +84,22 @@ namespace VentFreezeFix
 		[HarmonyPatch(typeof(Exhaust), "EmitCommon")]
 		public static class Exhaust_EmitCommon_Patch
 		{
-			public static void Postfix(Exhaust __instance, bool __result, int cell, PrimaryElement primary_element)
+			/// <summary>The packet's mass, read before the emit zeroes it.</summary>
+			public static void Prefix(PrimaryElement primary_element, out float __state)
 			{
-				if (!enabled || !armed || !__result || __instance.GetComponent<VentFreezeWatcher>() == null)
+				__state = primary_element != null ? primary_element.Mass : 0f;
+			}
+
+			public static void Postfix(Exhaust __instance, bool __result, int cell, PrimaryElement primary_element, float __state)
+			{
+				if (!enabled || !__result || __instance.GetComponent<VentFreezeWatcher>() == null)
+					return;
+				if (emitsLogged < EmitsToLog)
+				{
+					emitsLogged++;
+					Debug.Log("[VentFreezeFix] Vent " + cell + " emitted " + primary_element.ElementID + " " + __state.ToString("F1") + " kg at " + (primary_element.Temperature - 273.15f).ToString("F0") + " C");
+				}
+				if (!armed)
 					return;
 				armed = false;
 				pending = true;

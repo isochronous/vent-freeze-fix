@@ -1,11 +1,19 @@
-Fixes the save/load quirk where a packet leaving a liquid vent on the tick a save is written freezes into a natural tile on load instead of dropping as debris, sometimes taking the debris pile under the vent with it.
+Fixes the save/load bug where super-cooled liquid in flight from a liquid vent comes back from the load as a natural tile: inside the vent, entombing it, or on the floor under it, taking the debris pile with it.
 
-[h2]How it works[/h2]
-The game only forms a natural tile when the freezing liquid holds at least 80% of its element's default mass; smaller amounts become debris. Each liquid vent gets a watcher that checks the vent cell and the landing cell below it every tick for the first two seconds after a load, then switches itself off. When one of them turns into a natural tile although it held less liquid than that the tick before, the tile is turned back into debris of the same element at its full mass, pile included. Real pools that freeze are left alone.
+[h2]The two causes[/h2]
+[list]
+[*]Inside the vent: the packet a vent is holding is an item in its storage, and the game leaves it temperature simulated. After a load the sim reports the super-cooled packet as frozen and the game turns it into a tile in the vent's cell, with no mass rule. In running play the vent emits first, so you only see it after a load, and not every time.
+[*]Under the vent: a packet that landed but had not frozen yet is restored by the sim's own load as a tile in place, before any mod can act.
+[/list]
+
+[h2]The two fixes[/h2]
+Both are options, on by default.
+[list]
+[*][b]Insulate vent storage[/b] gives the vent's storage the game's sealed and insulated modifiers, so the packet stays in the vent and is emitted as usual. This is the fix posted on the forums, which several players confirmed; the option is there so you can turn it off if a game update fixes it first. Needs a restart.
+[*][b]Repair tiles after loading[/b]: for a second after a load, a natural tile that formed at or under a vent out of less liquid than a tile needs (80% of the element's default mass) is dug up through the game's own dig path and dropped as debris at its full mass, pile included. Real pools that freeze are left alone.
+[/list]
 
 [h2]Debug mode[/h2]
 An option adds a "Save on next vent emit" button to the game screen. Arm it and the next liquid vent emit writes VentFreezeRepro.sav next to your current save, on the exact tick, which is otherwise nearly impossible to hit by hand.
-
-Reads only the public grid and uses the game's own replace-element and spawn-resource calls; nothing in the sim or the save is touched.
 
 Source and issues: https://github.com/isochronous/vent-freeze-fix

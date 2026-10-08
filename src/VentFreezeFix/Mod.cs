@@ -35,7 +35,7 @@ namespace VentFreezeFix
 	/// other buildings holding element packets have. Sealed items are skipped by the transition
 	/// handler, and insulated items are not temperature simulated, so the packet stays in the vent
 	/// and is emitted as usual, where the sim's own rules turn a small freezing packet into debris.
-	/// Credit for the storage modifiers goes to the forum user whose patch several players confirmed.
+	/// The storage modifiers are Sgt_Imalas's fix, confirmed by several players.
 	/// </summary>
 	[HarmonyPatch(typeof(LiquidVentConfig), nameof(LiquidVentConfig.ConfigureBuildingTemplate))]
 	public static class LiquidVentConfig_Storage_Patch

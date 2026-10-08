@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.1.0 - 2026-10-07
 
 - First version.
 - Insulate vent storage (option, default on, needs a restart): the packet a liquid vent holds is kept sealed and insulated, so the game cannot solidify it into the vent's cell after a load. This is the cause of the tile inside the vent; the storage modifiers are Sgt_Imalas's fix.

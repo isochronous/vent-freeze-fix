@@ -9,11 +9,13 @@ Fixes the save/load bug where super-cooled liquid in flight from a liquid vent c
 [h2]The two fixes[/h2]
 Both are options, on by default.
 [list]
-[*][b]Insulate vent storage[/b] gives the vent's storage the game's sealed and insulated modifiers, so the packet stays in the vent and is emitted as usual. This is Sgt_Imalas's fix, which several players confirmed; the option is there so you can turn it off if a game update fixes it first. Needs a restart.
-[*][b]Repair tiles after loading[/b]: for a second after a load, a natural tile that formed at or under a vent out of less liquid than a tile needs (80% of the element's default mass) is dug up through the game's own dig path and dropped as debris at its full mass, pile included. Real pools that freeze are left alone.
+[*][b]Insulate vent storage[/b] gives the vent's storage the game's sealed and insulated modifiers, so the packet stays in the vent and is emitted as usual. The solution is Sgt_Imalas's (thanks for the sanity check), the option is there so you can turn it off if a game update fixes it first. Needs a restart.
+[*][b]Repair tiles after loading[/b]: for 5 ticks after a load, a natural tile that formed at or under a vent out of less liquid than a tile needs (80% of the element's default mass) is dug up through the game's own dig path and dropped as debris at its full mass, pile included. Real pools that freeze are left alone.
 [/list]
 
 [h2]Developer options[/h2]
-"Add button to reproduce bug conditions" puts a "Save on next vent emit" button on the game screen. Arm it and the next liquid vent emit writes VentFreezeRepro.sav next to your current save, on the exact tick, which is otherwise nearly impossible to hit by hand. "Enable debug mode" logs in detail what the mod sees.
+"Add button to reproduce bug conditions" puts a "Save on next vent emit" button on the game screen. Arm it and the next liquid vent emit writes VentFreezeRepro.sav next to your current save, on the exact tick, which is otherwise a real pain to hit by hand. "Enable debug mode" adds verbose logging.
+
+Made by a professional software developer with assistance from Claude Fable (and Sgt_Imalas).
 
 Source and issues: https://github.com/isochronous/vent-freeze-fix

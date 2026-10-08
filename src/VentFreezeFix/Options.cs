@@ -16,9 +16,14 @@ namespace VentFreezeFix
 		[JsonProperty]
 		public bool RepairOnLoad { get; set; } = true;
 
-		[Option("Debug mode", "Adds a button to the game screen that writes a save file (VentFreezeRepro.sav, next to the current save) on the tick a liquid vent emits, which is the only moment the bug can be captured. Takes effect when a game is loaded.")]
+		// Static categories are shown sorted by name, after the uncategorised options above.
+		[Option("Enable debug mode", "Logs in detail what the mod sees: the snapshots restored from the save, every cell the watcher checks on every tick with its verdict, and the packets the vents emit with their temperatures. Takes effect when a game is loaded.", "Developer options")]
 		[JsonProperty]
 		public bool DebugMode { get; set; } = false;
+
+		[Option("Add button to reproduce bug conditions", "Adds a button to the game screen that writes a save file (VentFreezeRepro.sav, next to the current save) on the tick a liquid vent emits, which is the only moment the bug can be captured. Takes effect when a game is loaded.", "Developer options")]
+		[JsonProperty]
+		public bool ReproButton { get; set; } = false;
 
 		public static Options Load()
 		{

@@ -17,6 +17,7 @@ namespace VentFreezeFix
 		public const string SaveName = "VentFreezeRepro.sav";
 
 		private static bool enabled;
+		private static bool buttonEnabled;
 		private static bool loaded;
 		private static bool armed;
 		private static bool pending;
@@ -47,12 +48,13 @@ namespace VentFreezeFix
 			{
 				Options options = Options.Load();
 				enabled = options.DebugMode;
+				buttonEnabled = options.ReproButton;
 				loaded = true;
 				VentFreezeWatcher.RepairEnabled = options.RepairOnLoad;
 				armed = false;
 				pending = false;
 				emitsLogged = 0;
-				if (!enabled || GameScreenManager.Instance?.ssOverlayCanvas == null)
+				if (!buttonEnabled || GameScreenManager.Instance?.ssOverlayCanvas == null)
 					return;
 				var button = new PButton("VentFreezeFixDebugSave")
 				{
@@ -92,14 +94,14 @@ namespace VentFreezeFix
 
 			public static void Postfix(Exhaust __instance, bool __result, int cell, PrimaryElement primary_element, float __state)
 			{
-				if (!enabled || !__result || __instance.GetComponent<VentFreezeWatcher>() == null)
+				if (!__result || __instance.GetComponent<VentFreezeWatcher>() == null)
 					return;
-				if (emitsLogged < EmitsToLog)
+				if (enabled && emitsLogged < EmitsToLog)
 				{
 					emitsLogged++;
 					Debug.Log("[VentFreezeFix] Vent " + cell + " emitted " + primary_element.ElementID + " " + __state.ToString("F1") + " kg at " + (primary_element.Temperature - 273.15f).ToString("F0") + " C");
 				}
-				if (!armed)
+				if (!buttonEnabled || !armed)
 					return;
 				armed = false;
 				pending = true;

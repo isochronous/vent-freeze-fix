@@ -19,9 +19,11 @@ Both fixes are options, on by default.
 
 The mod does not touch the sim or the save beyond the watcher's own snapshot; it reads public grid data and uses the game's own dig path.
 
-## Debug mode
+## Developer options
 
-The bug needs a save written in a 200 ms window, so it is hard to reproduce by hand. Turn on **Debug mode** in the mod's options and load a game: a button "Save on next vent emit" appears at the top left of the game screen. Click it to arm it; the next time any liquid vent emits a packet, the game writes `VentFreezeRepro.sav` next to the current save at the end of that frame. Load that file and unpause to see the tiles form and the watcher dig them. Debug mode also logs the restored snapshots, every cell the watcher looks at on every tick with its verdict, and the packets the vents emit with their temperatures.
+The bug needs a save written in a 200 ms window, so it is hard to reproduce by hand. Turn on **Add button to reproduce bug conditions** and load a game: a button "Save on next vent emit" appears at the top left of the game screen. Click it to arm it; the next time any liquid vent emits a packet, the game writes `VentFreezeRepro.sav` next to the current save at the end of that frame. Load that file and unpause to see the tiles form and the watcher dig them.
+
+**Enable debug mode** logs in detail what the mod sees: the restored snapshots, every cell the watcher looks at on every tick with its verdict, and the packets the vents emit with their temperatures. Without it only the repairs themselves are logged.
 
 ## Installing
 

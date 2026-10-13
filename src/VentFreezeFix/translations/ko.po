@@ -1,0 +1,73 @@
+msgid ""
+msgstr ""
+"Application: Oxygen Not Included\n"
+"POT Version: 2.0\n"
+"Language: ko_KR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.ARMED
+msgctxt "STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.ARMED"
+msgid "Armed: waiting for a vent to emit..."
+msgstr "준비됨: 벤트의 배출을 기다리는 중..."
+
+#. STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.SAVED
+msgctxt "STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.SAVED"
+msgid "Saved {0}"
+msgstr "{0} 저장됨"
+
+#. STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.TEXT
+msgctxt "STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.TEXT"
+msgid "Save on next vent emit"
+msgstr "다음 벤트 배출 시 저장"
+
+#. STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.TOOLTIP
+msgctxt "STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.TOOLTIP"
+msgid "Vent Freeze Fix debug: arms a save that is written on the tick a liquid vent emits a packet, to {0} next to the current save."
+msgstr "벤트 동결 수정 디버그: 액체 벤트가 패킷을 배출하는 틱에 현재 저장 파일 옆의 {0}에 기록되는 저장을 준비합니다."
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.CATEGORY.DEVELOPER
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.CATEGORY.DEVELOPER"
+msgid "Developer options"
+msgstr "개발자 옵션"
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.DEBUG_MODE.NAME
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.DEBUG_MODE.NAME"
+msgid "Enable debug mode"
+msgstr "디버그 모드 켜기"
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.DEBUG_MODE.TOOLTIP
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.DEBUG_MODE.TOOLTIP"
+msgid "Logs in detail what the mod sees: the snapshots restored from the save, every cell the watcher checks on every tick with its verdict, and the packets the vents emit with their temperatures. Takes effect when a game is loaded."
+msgstr "모드가 관찰한 내용을 자세히 기록합니다: 저장 파일에서 복원한 스냅샷, 감시기가 매 틱 확인하는 모든 타일과 그 판정, 그리고 벤트가 배출하는 패킷과 그 온도입니다. 게임을 불러올 때 적용됩니다."
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.INSULATE_VENTS.NAME
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.INSULATE_VENTS.NAME"
+msgid "Insulate vent storage"
+msgstr "벤트 저장소 단열"
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.INSULATE_VENTS.TOOLTIP
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.INSULATE_VENTS.TOOLTIP"
+msgid "Prevents the tile inside the vent. The packet a vent is holding is kept sealed and insulated, as it is in other buildings that hold packets, so the game cannot solidify it into the vent's cell after a load. Turn off if a game update fixes this on its own and this mod has not been updated yet. Needs a restart."
+msgstr "벤트 안에 타일이 생기는 것을 막습니다. 벤트가 들고 있는 패킷은 패킷을 보관하는 다른 건조물에서처럼 밀폐되고 단열된 상태로 유지되므로, 불러온 뒤 게임이 이를 벤트 타일에 굳힐 수 없습니다. 게임 업데이트로 이 문제가 자체적으로 해결되었는데 이 모드가 아직 업데이트되지 않았다면 끄세요. 게임을 다시 시작해야 합니다."
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.REPAIR_ON_LOAD.NAME
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.REPAIR_ON_LOAD.NAME"
+msgid "Repair tiles after loading"
+msgstr "불러온 뒤 타일 복구"
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.REPAIR_ON_LOAD.TOOLTIP
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.REPAIR_ON_LOAD.TOOLTIP"
+msgid "For the first second after a load, a natural tile that formed at or under a vent out of less liquid than a tile needs is dug up and dropped as debris at its full mass. Takes effect on the next load."
+msgstr "불러온 뒤 첫 1초 동안, 벤트 위치나 그 아래에 타일 하나에 필요한 양보다 적은 액체로 생긴 자연 타일을 파내어 전체 질량의 잔해로 떨어뜨립니다. 다음 불러오기부터 적용됩니다."
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.REPRO_BUTTON.NAME
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.REPRO_BUTTON.NAME"
+msgid "Add button to reproduce bug conditions"
+msgstr "버그 조건 재현 버튼 추가"
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.REPRO_BUTTON.TOOLTIP
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.REPRO_BUTTON.TOOLTIP"
+msgid "Adds a button to the game screen that writes a save file (VentFreezeRepro.sav, next to the current save) on the tick a liquid vent emits, which is the only moment the bug can be captured. Takes effect when a game is loaded."
+msgstr "액체 벤트가 배출하는 틱에 저장 파일(현재 저장 파일 옆의 VentFreezeRepro.sav)을 기록하는 버튼을 게임 화면에 추가합니다. 이 버그를 포착할 수 있는 유일한 순간입니다. 게임을 불러올 때 적용됩니다."

@@ -1,0 +1,73 @@
+msgid ""
+msgstr ""
+"Application: Oxygen Not Included\n"
+"POT Version: 2.0\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.ARMED
+msgctxt "STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.ARMED"
+msgid "Armed: waiting for a vent to emit..."
+msgstr "Взведено: ожидание выброса из клапана..."
+
+#. STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.SAVED
+msgctxt "STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.SAVED"
+msgid "Saved {0}"
+msgstr "Сохранено {0}"
+
+#. STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.TEXT
+msgctxt "STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.TEXT"
+msgid "Save on next vent emit"
+msgstr "Сохранить при следующем выбросе клапана"
+
+#. STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.TOOLTIP
+msgctxt "STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.TOOLTIP"
+msgid "Vent Freeze Fix debug: arms a save that is written on the tick a liquid vent emits a packet, to {0} next to the current save."
+msgstr "Отладка исправления замерзания клапанов: взводит сохранение, которое записывается в {0} рядом с текущим сохранением на том тике, когда клапан для жидкости выпускает пакет."
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.CATEGORY.DEVELOPER
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.CATEGORY.DEVELOPER"
+msgid "Developer options"
+msgstr "Параметры разработчика"
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.DEBUG_MODE.NAME
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.DEBUG_MODE.NAME"
+msgid "Enable debug mode"
+msgstr "Включить режим отладки"
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.DEBUG_MODE.TOOLTIP
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.DEBUG_MODE.TOOLTIP"
+msgid "Logs in detail what the mod sees: the snapshots restored from the save, every cell the watcher checks on every tick with its verdict, and the packets the vents emit with their temperatures. Takes effect when a game is loaded."
+msgstr "Подробно записывает в журнал то, что видит мод: снимки, восстановленные из сохранения, каждую клетку, которую наблюдатель проверяет на каждом тике, с ее вердиктом, и пакеты, которые выпускают клапаны, с их температурой. Вступает в силу при загрузке игры."
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.INSULATE_VENTS.NAME
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.INSULATE_VENTS.NAME"
+msgid "Insulate vent storage"
+msgstr "Изолировать хранилище клапана"
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.INSULATE_VENTS.TOOLTIP
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.INSULATE_VENTS.TOOLTIP"
+msgid "Prevents the tile inside the vent. The packet a vent is holding is kept sealed and insulated, as it is in other buildings that hold packets, so the game cannot solidify it into the vent's cell after a load. Turn off if a game update fixes this on its own and this mod has not been updated yet. Needs a restart."
+msgstr "Не дает твердой клетке образоваться внутри клапана. Пакет, который держит клапан, остается герметичным и теплоизолированным, как в других строениях, хранящих пакеты, поэтому игра не может затвердить его в клетку клапана после загрузки. Отключите, если обновление игры исправило это само, а этот мод еще не обновлен. Требуется перезапуск."
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.REPAIR_ON_LOAD.NAME
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.REPAIR_ON_LOAD.NAME"
+msgid "Repair tiles after loading"
+msgstr "Исправлять клетки после загрузки"
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.REPAIR_ON_LOAD.TOOLTIP
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.REPAIR_ON_LOAD.TOOLTIP"
+msgid "For the first second after a load, a natural tile that formed at or under a vent out of less liquid than a tile needs is dug up and dropped as debris at its full mass. Takes effect on the next load."
+msgstr "В первую секунду после загрузки природная клетка, образовавшаяся на клапане или под ним из меньшего количества жидкости, чем нужно для клетки, выкапывается и выпадает в виде обломков полной массы. Вступает в силу при следующей загрузке."
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.REPRO_BUTTON.NAME
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.REPRO_BUTTON.NAME"
+msgid "Add button to reproduce bug conditions"
+msgstr "Добавить кнопку для воспроизведения условий ошибки"
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.REPRO_BUTTON.TOOLTIP
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.REPRO_BUTTON.TOOLTIP"
+msgid "Adds a button to the game screen that writes a save file (VentFreezeRepro.sav, next to the current save) on the tick a liquid vent emits, which is the only moment the bug can be captured. Takes effect when a game is loaded."
+msgstr "Добавляет на игровой экран кнопку, которая записывает файл сохранения (VentFreezeRepro.sav, рядом с текущим сохранением) на том тике, когда клапан для жидкости выпускает жидкость, — единственный момент, когда ошибку можно поймать. Вступает в силу при загрузке игры."

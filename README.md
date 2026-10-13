@@ -37,7 +37,7 @@ As a local mod:
 
 ## Translations
 
-The mod is available in Chinese (Simplified); the game's language setting picks it. Other languages come from `src/VentFreezeFix/translations/VentFreezeFix.pot`: translate it as `<locale>.po` (`ko.po`, `ru.po`, the game's locale codes) in that folder and the game loads it.
+The mod is available in Chinese (Simplified), Korean and Russian; the game's language setting picks it. Other languages come from `src/VentFreezeFix/translations/VentFreezeFix.pot`: translate it as `<locale>.po` (`ko.po`, `ru.po`, the game's locale codes) in that folder and the game loads it.
 
 ## Building
 

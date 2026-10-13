@@ -1,0 +1,73 @@
+msgid ""
+msgstr ""
+"Application: Oxygen Not Included\n"
+"POT Version: 2.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.ARMED
+msgctxt "STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.ARMED"
+msgid "Armed: waiting for a vent to emit..."
+msgstr ""
+
+#. STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.SAVED
+msgctxt "STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.SAVED"
+msgid "Saved {0}"
+msgstr ""
+
+#. STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.TEXT
+msgctxt "STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.TEXT"
+msgid "Save on next vent emit"
+msgstr ""
+
+#. STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.TOOLTIP
+msgctxt "STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.TOOLTIP"
+msgid "Vent Freeze Fix debug: arms a save that is written on the tick a liquid vent emits a packet, to {0} next to the current save."
+msgstr ""
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.CATEGORY.DEVELOPER
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.CATEGORY.DEVELOPER"
+msgid "Developer options"
+msgstr ""
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.DEBUG_MODE.NAME
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.DEBUG_MODE.NAME"
+msgid "Enable debug mode"
+msgstr ""
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.DEBUG_MODE.TOOLTIP
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.DEBUG_MODE.TOOLTIP"
+msgid "Logs in detail what the mod sees: the snapshots restored from the save, every cell the watcher checks on every tick with its verdict, and the packets the vents emit with their temperatures. Takes effect when a game is loaded."
+msgstr ""
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.INSULATE_VENTS.NAME
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.INSULATE_VENTS.NAME"
+msgid "Insulate vent storage"
+msgstr ""
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.INSULATE_VENTS.TOOLTIP
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.INSULATE_VENTS.TOOLTIP"
+msgid "Prevents the tile inside the vent. The packet a vent is holding is kept sealed and insulated, as it is in other buildings that hold packets, so the game cannot solidify it into the vent's cell after a load. Turn off if a game update fixes this on its own and this mod has not been updated yet. Needs a restart."
+msgstr ""
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.REPAIR_ON_LOAD.NAME
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.REPAIR_ON_LOAD.NAME"
+msgid "Repair tiles after loading"
+msgstr ""
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.REPAIR_ON_LOAD.TOOLTIP
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.REPAIR_ON_LOAD.TOOLTIP"
+msgid "For the first second after a load, a natural tile that formed at or under a vent out of less liquid than a tile needs is dug up and dropped as debris at its full mass. Takes effect on the next load."
+msgstr ""
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.REPRO_BUTTON.NAME
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.REPRO_BUTTON.NAME"
+msgid "Add button to reproduce bug conditions"
+msgstr ""
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.REPRO_BUTTON.TOOLTIP
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.REPRO_BUTTON.TOOLTIP"
+msgid "Adds a button to the game screen that writes a save file (VentFreezeRepro.sav, next to the current save) on the tick a liquid vent emits, which is the only moment the bug can be captured. Takes effect when a game is loaded."
+msgstr ""
+

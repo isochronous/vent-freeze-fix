@@ -7,6 +7,7 @@
     <RootNamespace>VentFreezeFix</RootNamespace>
     <Version>0.1.0</Version>
     <UsePLib>true</UsePLib>
+    <UseTranslations>true</UseTranslations>
     <ReferenceUnityUI>true</ReferenceUnityUI>
   </PropertyGroup>
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Chinese (Simplified) translation. Translations load from `translations/<locale>.po`; the template for other languages is `translations/VentFreezeFix.pot`.
+
 ## 0.1.0 - 2026-10-07
 
 - First version.

@@ -2,6 +2,7 @@ using System.IO;
 using HarmonyLib;
 using PeterHan.PLib.UI;
 using UnityEngine;
+using DEBUG_BUTTON = VentFreezeFix.ModStrings.VENTFREEZEFIX.DEBUG_BUTTON;
 
 namespace VentFreezeFix
 {
@@ -58,8 +59,8 @@ namespace VentFreezeFix
 					return;
 				var button = new PButton("VentFreezeFixDebugSave")
 				{
-					Text = "Save on next vent emit",
-					ToolTip = "Vent Freeze Fix debug: arms a save that is written on the tick a liquid vent emits a packet, to " + SaveName + " next to the current save.",
+					Text = DEBUG_BUTTON.TEXT,
+					ToolTip = string.Format(DEBUG_BUTTON.TOOLTIP, SaveName),
 					OnClick = OnClick,
 					Margin = new RectOffset(10, 10, 6, 6),
 				}.SetKleiBlueStyle();
@@ -73,7 +74,7 @@ namespace VentFreezeFix
 		private static void OnClick(GameObject source)
 		{
 			armed = !armed;
-			SetText(armed ? "Armed: waiting for a vent to emit..." : "Save on next vent emit");
+			SetText(armed ? DEBUG_BUTTON.ARMED : DEBUG_BUTTON.TEXT);
 		}
 
 		private static void SetText(string text)
@@ -123,7 +124,7 @@ namespace VentFreezeFix
 				string path = Path.Combine(folder, SaveName);
 				SaveLoader.Instance.Save(path, isAutoSave: false, updateSavePointer: false);
 				Debug.Log("[VentFreezeFix] Debug save written to " + path + " on the tick " + pendingNote + " was emitted");
-				SetText("Saved " + SaveName);
+				SetText(string.Format(DEBUG_BUTTON.SAVED, SaveName));
 			}
 		}
 	}

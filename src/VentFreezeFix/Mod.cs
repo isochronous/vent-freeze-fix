@@ -1,4 +1,5 @@
 using HarmonyLib;
+using Isochronous;
 using KMod;
 using PeterHan.PLib.Core;
 using PeterHan.PLib.Options;
@@ -12,6 +13,7 @@ namespace VentFreezeFix
 		{
 			base.OnLoad(harmony);
 			PUtil.InitLibrary(false);
+			Translations.Register(harmony, typeof(ModStrings));
 			new POptions().RegisterOptions(this, typeof(Options));
 			Debug.Log("[VentFreezeFix] Loaded version " + typeof(VentFreezeFixMod).Assembly.GetName().Version);
 		}

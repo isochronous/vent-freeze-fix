@@ -35,6 +35,10 @@ As a local mod:
    - Linux: `~/.config/unity3d/Klei/Oxygen Not Included/mods/local/VentFreezeFix`
 3. Enable it in the game's Mods menu and restart.
 
+## Translations
+
+The mod is available in Chinese (Simplified); the game's language setting picks it. Other languages come from `src/VentFreezeFix/translations/VentFreezeFix.pot`: translate it as `<locale>.po` (`ko.po`, `ru.po`, the game's locale codes) in that folder and the game loads it.
+
 ## Building
 
 ```

@@ -1,0 +1,73 @@
+msgid ""
+msgstr ""
+"Application: Oxygen Not Included\n"
+"POT Version: 2.0\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.ARMED
+msgctxt "STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.ARMED"
+msgid "Armed: waiting for a vent to emit..."
+msgstr "已就绪：等待排液口排出……"
+
+#. STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.SAVED
+msgctxt "STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.SAVED"
+msgid "Saved {0}"
+msgstr "已保存{0}"
+
+#. STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.TEXT
+msgctxt "STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.TEXT"
+msgid "Save on next vent emit"
+msgstr "下次排液口排出时保存"
+
+#. STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.TOOLTIP
+msgctxt "STRINGS.VENTFREEZEFIX.DEBUG_BUTTON.TOOLTIP"
+msgid "Vent Freeze Fix debug: arms a save that is written on the tick a liquid vent emits a packet, to {0} next to the current save."
+msgstr "排液口冻结修复调试：准备一次存档，在排液口排出液体包的那一刻写入当前存档旁的{0}。"
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.CATEGORY.DEVELOPER
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.CATEGORY.DEVELOPER"
+msgid "Developer options"
+msgstr "开发者选项"
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.DEBUG_MODE.NAME
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.DEBUG_MODE.NAME"
+msgid "Enable debug mode"
+msgstr "启用调试模式"
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.DEBUG_MODE.TOOLTIP
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.DEBUG_MODE.TOOLTIP"
+msgid "Logs in detail what the mod sees: the snapshots restored from the save, every cell the watcher checks on every tick with its verdict, and the packets the vents emit with their temperatures. Takes effect when a game is loaded."
+msgstr "详细记录模组观察到的内容：从存档恢复的快照、监视器每个刻检查的每个方格及其判定结果，以及排液口排出的液体包及其温度。加载游戏时生效。"
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.INSULATE_VENTS.NAME
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.INSULATE_VENTS.NAME"
+msgid "Insulate vent storage"
+msgstr "隔热排液口存储"
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.INSULATE_VENTS.TOOLTIP
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.INSULATE_VENTS.TOOLTIP"
+msgid "Prevents the tile inside the vent. The packet a vent is holding is kept sealed and insulated, as it is in other buildings that hold packets, so the game cannot solidify it into the vent's cell after a load. Turn off if a game update fixes this on its own and this mod has not been updated yet. Needs a restart."
+msgstr "防止排液口内部形成砖块。排液口持有的液体包会像其他持有液体包的建筑一样保持密封和隔热，因此游戏无法在加载后将其凝固到排液口所在的方格中。若游戏更新已自行修复此问题而本模组尚未更新，可将其关闭。需要重启游戏。"
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.REPAIR_ON_LOAD.NAME
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.REPAIR_ON_LOAD.NAME"
+msgid "Repair tiles after loading"
+msgstr "加载后修复砖块"
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.REPAIR_ON_LOAD.TOOLTIP
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.REPAIR_ON_LOAD.TOOLTIP"
+msgid "For the first second after a load, a natural tile that formed at or under a vent out of less liquid than a tile needs is dug up and dropped as debris at its full mass. Takes effect on the next load."
+msgstr "加载后的第一秒内，若排液口处或其下方由不足以形成砖块的液体形成了自然砖块，则将其挖掉，并以全部质量作为碎片掉落。下次加载时生效。"
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.REPRO_BUTTON.NAME
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.REPRO_BUTTON.NAME"
+msgid "Add button to reproduce bug conditions"
+msgstr "添加重现漏洞条件的按钮"
+
+#. STRINGS.VENTFREEZEFIX.OPTIONS.REPRO_BUTTON.TOOLTIP
+msgctxt "STRINGS.VENTFREEZEFIX.OPTIONS.REPRO_BUTTON.TOOLTIP"
+msgid "Adds a button to the game screen that writes a save file (VentFreezeRepro.sav, next to the current save) on the tick a liquid vent emits, which is the only moment the bug can be captured. Takes effect when a game is loaded."
+msgstr "在游戏界面添加一个按钮，在排液口排出液体的那一刻写入存档文件（VentFreezeRepro.sav，与当前存档放在一起），这是唯一能够捕获该漏洞的时刻。加载游戏时生效。"

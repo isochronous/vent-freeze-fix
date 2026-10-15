@@ -1,5 +1,7 @@
 # Vent Freeze Fix
 
+**This repository is archived.** This project now lives in [isochronous/ONI-Mods](https://github.com/isochronous/ONI-Mods/tree/main/mods/vent-freeze-fix), with its full history; work and new releases continue there. The releases published here stay available.
+
 An [Oxygen Not Included](https://www.klei.com/games/oxygen-not-included) mod for a save/load bug with liquid vents.
 
 ## The problem
